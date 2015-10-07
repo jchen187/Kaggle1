@@ -8,7 +8,9 @@ labels_train = np.loadtxt(ytrain)
 features_test = np.loadtxt(xtest)
 
 from sklearn import svm
-classifier = svm.SVC()
+# classifier = svm.SVC()
+from sklearn.naive_bayes import GaussianNB
+classifier = GaussianNB()
 classifier.fit(features_train,labels_train)
 prediction = classifier.predict(features_test)
 
